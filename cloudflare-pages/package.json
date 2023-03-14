@@ -1,0 +1,30 @@
+{
+  "name": "cloudflare-pages",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cloudflare:watch": "next-on-pages --watch",
+    "cloudflare:build": "next-on-pages --experimental-minify",
+    "cloudflare:dev": "wrangler pages dev .vercel/output/static --compatibility-flags=streams_enable_constructors"
+  },
+  "dependencies": {
+    "next": "12.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^0.3.0",
+    "@types/node": "18.15.3",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.36.0",
+    "eslint-config-next": "12.3.2",
+    "typescript": "4.9.5",
+    "vercel": "^28.16.15",
+    "wrangler": "^2.12.3"
+  }
+}

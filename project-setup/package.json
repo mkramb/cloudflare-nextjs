@@ -1,0 +1,15 @@
+{
+  "name": "project-setup",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Mitja Kramberger <mitja.kramberger@primarybid.com>",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach --verbose --parallel --topological run build",
+    "start": "yarn workspaces foreach --verbose --parallel --interlaced run start:dev",
+    "clean": "git clean -xdf"
+  },
+  "packageManager": "yarn@3.4.1"
+}
